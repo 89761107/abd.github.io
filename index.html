@@ -11,7 +11,12 @@
 <script>
     window.$docsify = {
       // 完整配置参数
-loadSidebar: true
+loadSidebar: true,
+copyCode: {
+    buttonText : '复制',
+    errorText  : 'Error',
+    successText: '已复制'
+  },
       search: {
         maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
         paths: [],                      // or 'auto'，匹配文件路径
