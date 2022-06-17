@@ -18,6 +18,21 @@ copyCode: {
     errorText  : 'Error',
     successText: '已复制'
   },
+plugins: [
+    function(hook) {
+      var footer = [
+        '<hr/>',
+        '<footer>',
+        '<span><a href="https://github.com/QingWei-Li">cinwell</a> &copy;2017.</span>',
+        '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+        '</footer>'
+      ].join('');
+
+      hook.afterEach(function(html) {
+        return html + footer;
+      });
+    }
+  ],
       search: {
         maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
         paths: [],                      // or 'auto'，匹配文件路径
